@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
+  <title>Nishi | Graphic & UI/UX Designer | Premium Portfolio</title>
+  <meta name="description" content="Nishi - Professional Graphic Designer & UI/UX Designer available for freelance and full-time opportunities. View my portfolio and get in touch.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #0B0B0F; font-family: 'Inter', sans-serif; color: #F5F5F7; overflow-x: hidden; scroll-behavior: smooth; }
+
+    /* TRENDY CURSOR EFFECT */
+    .custom-cursor { width: 20px; height: 20px; background: rgba(0, 217, 255, 0.5); border-radius: 50%; position: fixed; pointer-events: none; z-index: 99999; transition: transform 0.1s ease; backdrop-filter: blur(4px); box-shadow: 0 0 15px #00D9FF; mix-blend-mode: difference; }
+    .cursor-dot { width: 6px; height: 6px; background: #7F5AF0; border-radius: 50%; position: fixed; pointer-events: none; z-index: 99999; transition: 0.05s linear; }
+    @media (max-width: 768px) { .custom-cursor, .cursor-dot, .cursor-glow { display: none; } }
+
+    .whatsapp-float { position: fixed; bottom: 30px; right: 30px; z-index: 9999; background: #25D366; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 20px rgba(37,211,102,0.5); transition: all 0.3s ease; }
+    .whatsapp-float:hover { transform: scale(1.1); }
+    .whatsapp-float i { font-size: 35px; color: white; }
+    @media (max-width: 768px) { .whatsapp-float { width: 50px; height: 50px; bottom: 20px; right: 20px; } .whatsapp-float i { font-size: 28px; } }
+
+    .availability-banner { background: linear-gradient(135deg, #7F5AF0, #00D9FF); padding: 10px 20px; text-align: center; position: relative; z-index: 100; }
+    .availability-banner p { color: #0B0B0F; font-weight: 600; font-size: 0.9rem; }
+    .cursor-glow { position: fixed; width: 300px; height: 300px; background: radial-gradient(circle, rgba(127,90,240,0.2) 0%, rgba(0,217,255,0) 70%); border-radius: 50%; pointer-events: none; z-index: 9998; transform: translate(-50%, -50%); transition: transform 0.05s ease-out; filter: blur(40px); }
+    .blob { position: fixed; width: 60vw; height: 60vw; background: radial-gradient(circle, rgba(127,90,240,0.2), rgba(255,77,141,0.08)); border-radius: 50%; filter: blur(80px); z-index: -2; animation: floatBlob 20s infinite alternate; }
+    .blob2 { width: 50vw; height: 50vw; background: radial-gradient(circle, rgba(0,217,255,0.15), rgba(127,90,240,0.05)); bottom: 0; right: 0; animation: floatBlob2 25s infinite alternate; }
+    @keyframes floatBlob { 0% { transform: translate(-10%, -10%); opacity: 0.4; } 100% { transform: translate(15%, 15%); opacity: 0.7; } }
+    @keyframes floatBlob2 { 0% { transform: translate(10%, 10%); opacity: 0.3; } 100% { transform: translate(-15%, -20%); opacity: 0.8; } }
+    @keyframes pulseBg { 0% { filter: hue-rotate(0deg); transform: scale(1); } 100% { filter: hue-rotate(20deg); transform: scale(1.05); } }
+
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
+    section { padding: 80px 0; }
+    @media (max-width: 768px) { section { padding: 60px 0; } }
+
+    .glass-card, .skill-card, .contact-form, .about-card { background: rgba(20, 20, 30, 0.5); backdrop-filter: blur(12px); border-radius: 28px; border: 1px solid rgba(127,90,240,0.25); transition: all 0.3s ease; }
+
+    .btn-neon { display: inline-block; padding: 14px 32px; border-radius: 60px; font-weight: 600; text-decoration: none; transition: all 0.3s ease; background: linear-gradient(135deg, #7F5AF0, #00D9FF); color: #0B0B0F; box-shadow: 0 0 12px rgba(0,217,255,0.4); font-size: 1rem; cursor: pointer; border: none; }
+    .btn-outline { background: transparent; border: 1.5px solid #7F5AF0; color: #F5F5F7; box-shadow: none; margin-left: 16px; }
+    .btn-outline:hover { background: rgba(127,90,240,0.2); border-color: #00D9FF; }
+    .btn-neon:hover { transform: translateY(-3px); box-shadow: 0 0 20px #7F5AF0; }
+
+    h1, h2, h3, .hero-name { font-family: 'Syne', sans-serif; font-weight: 700; }
+    h2 { font-size: 2.8rem; margin-bottom: 2rem; background: linear-gradient(135deg, #FFF, #7F5AF0, #00D9FF); background-clip: text; -webkit-background-clip: text; color: transparent; display: inline-block; }
+    @media (max-width: 768px) { h2 { font-size: 2.2rem; } }
+
+    .hero { min-height: 100vh; display: flex; align-items: center; }
+    .hero-content { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 3rem; }
+    .hero-text { flex: 1.2; }
+    .hero-image { flex: 1; display: flex; justify-content: center; }
+    .hero-name { font-size: 5rem; line-height: 1.1; margin-bottom: 1rem; }
+    .hero-highlight { color: #00D9FF; text-shadow: 0 0 10px #00D9FF80; }
+    .hero-sub { font-size: 1.2rem; color: #ccc; margin: 1.5rem 0 2rem; max-width: 550px; }
+    .hero-image img { width: 100%; max-width: 420px; height: auto; aspect-ratio: 1 / 1; border-radius: 50%; object-fit: cover; box-shadow: 0 25px 45px rgba(0,0,0,0.4), 0 0 0 4px rgba(127,90,240,0.4); border: 2px solid rgba(0,217,255,0.5); transition: transform 0.4s; }
+    .hero-image img:hover { transform: scale(1.03); }
+
+    .skills-grid { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem; }
+    .skill-card { padding: 0.9rem 1.5rem; border-radius: 50px; display: inline-flex; align-items: center; gap: 10px; font-weight: 500; background: rgba(30, 30, 45, 0.6); cursor: default; }
+    .skill-card i { font-size: 1.5rem; color: #7F5AF0; }
+
+    .bento-grid, .designs-grid, .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+    .portfolio-item, .design-card, .service-card { background: #111117; border-radius: 24px; overflow: hidden; transition: all 0.4s ease; border: 1px solid rgba(127,90,240,0.2); cursor: pointer; }
+    .portfolio-item:hover, .design-card:hover, .service-card:hover { transform: translateY(-8px); border-color: #00D9FF; box-shadow: 0 20px 30px -12px rgba(0,217,255,0.3); }
+    .portfolio-img, .design-img, .service-img { width: 100%; height: 220px; object-fit: cover; transition: transform 0.5s; }
+    .portfolio-item:hover .portfolio-img { transform: scale(1.05); }
+    .portfolio-info, .design-info, .service-content { padding: 1.2rem; }
+    .service-content h3 { font-size: 1.4rem; margin-bottom: 0.5rem; }
+    .service-icon { font-size: 2rem; background: linear-gradient(135deg, #7F5AF0, #FF4D8D); background-clip: text; -webkit-background-clip: text; color: transparent; }
+
+    .contact-form { padding: 2.5rem; max-width: 700px; margin: 0 auto; }
+    input, textarea { width: 100%; padding: 1rem; background: rgba(10,10,15,0.8); border: 1px solid #2c2c3a; border-radius: 24px; color: #fff; }
+    input:focus, textarea:focus { outline: none; border-color: #7F5AF0; }
+
+    .social-links { display: flex; justify-content: center; gap: 2rem; margin-top: 2rem; }
+    .social-links a { color: #F5F5F7; font-size: 1.8rem; transition: 0.2s; }
+    .social-links a:hover { color: #00D9FF; transform: translateY(-4px); }
+
+    .popup { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); backdrop-filter: blur(5px); display: none; justify-content: center; align-items: center; z-index: 99999; }
+    .popup-content { background: #111117; padding: 40px; border-radius: 28px; text-align: center; border: 1px solid #7F5AF0; }
+    .reveal { opacity: 0; transform: translateY(30px); transition: all 0.7s ease; }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+    .lightbox { display: none; position: fixed; z-index: 10000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); backdrop-filter: blur(10px); cursor: pointer; }
+    .lightbox-img { margin: auto; display: block; max-width: 90%; max-height: 90%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 20px; border: 2px solid #7F5AF0; }
+    .close-lightbox { position: absolute; top: 20px; right: 35px; color: #fff; font-size: 40px; cursor: pointer; }
+
+    /* BACK BUTTON STICKY - FULLY FUNCTIONAL */
+    .back-button-sticky { position: fixed; top: 25px; left: 25px; z-index: 10000; background: rgba(20,20,30,0.7); backdrop-filter: blur(12px); border: 1px solid rgba(127,90,240,0.5); border-radius: 60px; padding: 12px 26px; display: flex; align-items: center; gap: 10px; font-weight: 600; color: white; cursor: pointer; transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1); font-size: 0.95rem; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+    .back-button-sticky i { font-size: 1.2rem; transition: transform 0.2s; }
+    .back-button-sticky:hover { border-color: #00D9FF; box-shadow: 0 0 18px rgba(0,217,255,0.5); transform: translateX(-6px); background: rgba(30,30,50,0.9); }
+    .back-button-sticky:hover i { transform: translateX(-3px); }
+    @media (max-width: 768px) { .back-button-sticky { padding: 8px 18px; top: 15px; left: 15px; font-size: 0.8rem; } }
+
+    footer { padding: 2rem 0; text-align: center; border-top: 1px solid rgba(127,90,240,0.2); }
+    .job-highlight { background: linear-gradient(135deg, rgba(127,90,240,0.15), rgba(0,217,255,0.1)); border-left: 4px solid #00D9FF; padding: 1.2rem; border-radius: 16px; margin-top: 1.5rem; }
+  </style>
+</head>
+<body>
+
+<div class="availability-banner"><p><i class="fas fa-briefcase"></i> OPEN FOR WORK | Available for freelance projects & full-time opportunities</p></div>
+<a href="https://wa.me/9076972734" target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+
+<div class="cursor-glow" id="cursorGlow"></div>
+<div class="custom-cursor" id="customCursor"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="blob" style="top: -20%; left: -10%;"></div>
+<div class="blob blob2"></div>
+
+<div id="lightbox" class="lightbox"><span class="close-lightbox">&times;</span><img class="lightbox-img" id="lightboxImg"></div>
+<div id="popup" class="popup"><div class="popup-content"><h2>🎉 Thank You!</h2><p id="popupText">Your message has been sent.</p><button onclick="closePopup()">OK</button></div></div>
+
+<div id="app-root">
+  <!-- MAIN HOMEPAGE CONTENT (Initially visible) -->
+  <section class="hero" id="home"><div class="container hero-content"><div class="hero-text reveal"><h1 class="hero-name">Hi, I'm <span class="hero-highlight">Nishi</span></h1><p class="hero-sub">Graphic Designer & UI/UX Designer crafting beautiful digital experiences.</p><div><a href="#portfolio" class="btn-neon">View My Work</a><a href="#contact" class="btn-neon btn-outline">Hire Me</a></div><div class="job-highlight"><p><i class="fas fa-rocket" style="color:#00D9FF;"></i> <strong>Actively seeking opportunities!</strong> Available for freelance & full-time roles.</p></div></div><div class="hero-image reveal"><img src="https://i.ibb.co/Q7r0Tccf/my-profile.jpg" alt="Nishi"></div></div></section>
+
+  <section id="about"><div class="container"><div class="reveal"><h2>About Me</h2><div class="about-card glass-card" style="padding:2rem;"><p style="font-size:1.15rem;">I'm Nishi — a passionate Graphic Designer & UI/UX Designer with 1.5 years of experience creating stunning visual experiences.</p><div style="display:flex; flex-wrap:wrap; gap:0.8rem; margin-top:1.5rem;"><span class="skill-card"><i class="fas fa-paintbrush"></i> UI/UX</span><span class="skill-card"><i class="fas fa-trademark"></i> Branding</span><span class="skill-card"><i class="fas fa-draw-polygon"></i> Graphic Design</span></div></div></div></div></section>
+
+  <section id="skills"><div class="container"><div class="reveal"><h2>Core Expertise</h2><div class="skills-grid"><div class="skill-card"><i class="fab fa-figma"></i> Figma</div><div class="skill-card"><i class="fab fa-adobe"></i> Photoshop</div><div class="skill-card"><i class="fab fa-adobe"></i> Illustrator</div><div class="skill-card"><i class="fas fa-palette"></i> Canva</div></div></div></div></section>
+
+  <!-- MY DESIGNS SECTION with all your new images -->
+  <section id="mydesigns"><div class="container"><div class="reveal"><h2>🎨 My Designs</h2><div class="designs-grid">
+    <div class="design-card" onclick="openLightbox('https://i.ibb.co/C34nC5MK/flyer-graphic-design.png')"><img class="design-img" src="https://i.ibb.co/C34nC5MK/flyer-graphic-design.png" alt="Flyer"><div class="design-info"><h3>Flyer Graphic</h3></div></div>
+    <div class="design-card" onclick="openLightbox('https://i.ibb.co/7NTdqqk5/flyer.png')"><img class="design-img" src="https://i.ibb.co/7NTdqqk5/flyer.png" alt="Flyer"><div class="design-info"><h3>Modern Flyer</h3></div></div>
+    <div class="design-card" onclick="openLightbox('https://i.ibb.co/TM2gNZmf/digital-marketing.png')"><img class="design-img" src="https://i.ibb.co/TM2gNZmf/digital-marketing.png" alt="Digital Marketing"><div class="design-info"><h3>Digital Marketing</h3></div></div>
+    <div class="design-card" onclick="openLightbox('https://i.ibb.co/0pYBxQbP/business.png')"><img class="design-img" src="https://i.ibb.co/0pYBxQbP/business.png" alt="Business"><div class="design-info"><h3>Business Branding</h3></div></div>
+    <div class="design-card" onclick="openLightbox('https://i.ibb.co/v6Yj94cV/instagram-post.jpg')"><img class="design-img" src="https://i.ibb.co/v6Yj94cV/instagram-post.jpg" alt="Instagram"><div class="design-info"><h3>Instagram Post</h3></div></div>
+    <div class="design-card" onclick="openLightbox('https://i.ibb.co/tpqD6Xxv/Design-That-Speaks.jpg')"><img class="design-img" src="https://i.ibb.co/tpqD6Xxv/Design-That-Speaks.jpg" alt="Design That Speaks"><div class="design-info"><h3>Design That Speaks</h3></div></div>
+    <div class="design-card" onclick="openLightbox('https://i.ibb.co/X1wFBGT/flyer.jpg')"><img class="design-img" src="https://i.ibb.co/X1wFBGT/flyer.jpg" alt="Flyer"><div class="design-info"><h3>Creative Flyer</h3></div></div>
+  </div></div></div></section>
+
+  <!-- SELECTED WORK with updated images -->
+  <section id="portfolio"><div class="container"><div class="reveal"><h2>Selected Work</h2><div class="bento-grid" id="portfolio-grid"></div></div></div></section>
+
+  <!-- SERVICES SECTION with new images -->
+  <section id="services"><div class="container"><div class="reveal"><h2>What I Offer</h2><div class="service-grid" id="services-grid"></div></div></div></section>
+
+  <section id="contact"><div class="container"><div class="reveal"><h2>Let's Connect</h2><div class="contact-form glass-card"><form id="contactForm"><div class="form-group"><input type="text" placeholder="Your Name" required id="name"></div><div class="form-group"><input type="email" placeholder="Email Address" required id="email"></div><div class="form-group"><textarea rows="4" placeholder="Tell me about your project..." required id="message"></textarea></div><button type="submit" class="btn-neon" style="width:100%">Send Message <i class="fas fa-paper-plane"></i></button></form><div class="social-links"><a href="#"><i class="fab fa-behance"></i></a><a href="#"><i class="fab fa-dribbble"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="https://wa.me/9076972734"><i class="fab fa-whatsapp"></i></a></div><p style="text-align:center; margin-top:1rem;"><i class="fas fa-envelope"></i> nishim3003@gmail.com<br><i class="fab fa-whatsapp"></i> +91 90769 72734</p></div></div></div></section>
+  <footer><div class="container"><p>© 2026 Nishi — Graphic & UI/UX Designer.</p></div></footer>
+</div>
+
+<script>
+  // ---------- PROJECTS DATA ----------
+  const projectsData = [
+    { id: "mobile-app-ui", title: "Mobile App UI Design", category: "UI/UX", image: "https://i.pinimg.com/736x/0a/ea/b7/0aeab7d5226cffa432352c9db8557ad9.jpg", overview: "Fitness tracker with neon glassmorphism. Modern health app with gesture navigation.", problem: "Users found existing apps boring and unmotivating.", process: "Research -> Wireframes -> High-fidelity Prototype", colors: "#0B0B0F, #7F5AF0, #00D9FF", typography: "Syne + Inter", tools: ["Figma", "Illustrator"], prototype: "#" },
+    { id: "saas-dashboard", title: "SaaS Dashboard", category: "Web Design", image: "https://i.pinimg.com/1200x/1b/bd/21/1bbd21e487733159ce4b5e2b1fc51e19.jpg", overview: "Analytics platform for startups with real-time data.", problem: "Complex data needed clear visualization.", process: "Wireframes -> UI System -> Prototype", colors: "#1E1E2F, #00D9FF", typography: "Inter", tools: ["Figma"], prototype: "#" },
+    { id: "fashion-brand", title: "Fashion Brand Identity", category: "Branding", image: "https://i.pinimg.com/736x/85/39/50/8539500b78115558c2f4aeea02cafc5d.jpg", overview: "Luxury visual identity for high-end fashion label.", problem: "Needed to stand out in saturated market.", process: "Research -> Logo Design -> Brand Guidelines", colors: "Gold, Black, White", typography: "Playfair Display", tools: ["Illustrator", "Photoshop"], prototype: "#" },
+    { id: "social-campaign", title: "Social Media Campaign", category: "Marketing", image: "https://i.pinimg.com/736x/86/17/f0/8617f04c934b96382dc5fe812b056ed2.jpg", overview: "Viral assets and motion graphics for Instagram.", problem: "Low engagement rate on existing content.", process: "Strategy -> Creatives -> Launch & Monitor", colors: "Neon palette", typography: "Syne", tools: ["Canva", "After Effects"], prototype: "#" },
+    { id: "landing-page", title: "Landing Page Design", category: "Web", image: "https://i.pinimg.com/736x/66/83/8e/66838ea953670e716fcacf79badd0df8.jpg", overview: "Conversion-focused fintech landing page.", problem: "Low conversion rates on old design.", process: "Research -> High-fidelity -> A/B Testing", colors: "#0B0B0F, #7F5AF0", typography: "Inter", tools: ["Figma", "Webflow"], prototype: "#" },
+    { id: "ecommerce-ui", title: "E-commerce Website UI", category: "E-com", image: "https://i.pinimg.com/736x/25/94/bf/2594bf9287739d91242f47f16f9ab594.jpg", overview: "Modern minimalist storefront with seamless checkout.", problem: "Cluttered old design causing cart abandonment.", process: "Audit -> Redesign -> Prototype", colors: "White, #00D9FF", typography: "Syne", tools: ["Figma", "Photoshop"], prototype: "#" }
+  ];
+
+  // SERVICES DATA with new images & video placeholders (using high-quality loop videos from pins)
+  const servicesData = [
+    { id: "uiux-design", title: "UI/UX Design", video: "https://pin.it/7tCzCaquj", description: "Designing seamless and modern digital experiences.", features: ["User Research", "Wireframing", "Prototyping", "Responsive Design", "App & Website UI"], tools: ["Figma", "Adobe XD"], image: "https://i.pinimg.com/736x/52/e7/c4/52e7c45e2da4583d7b1fb4233fabb6ba.jpg" },
+    { id: "graphic-design", title: "Graphic Design", video: "https://pin.it/44kQVxl1O", description: "Creative visuals that capture attention instantly.", features: ["Posters & Flyers", "Social Media Graphics", "Advertising Creatives", "Marketing Materials"], tools: ["Photoshop", "Illustrator"], image: "https://i.pinimg.com/736x/c1/af/a2/c1afa29cca2eaf42015a5ccf33c1cf5e.jpg" },
+    { id: "brand-identity", title: "Brand Identity", video: "https://pin.it/4Y5RYNw9G", description: "Building memorable brands with powerful visuals.", features: ["Logo Design", "Typography Systems", "Color Strategy", "Packaging Design"], tools: ["Illustrator", "Figma"], image: "https://i.pinimg.com/736x/1a/56/cd/1a56cd008a9669d0ee5f664ed2e820ce.jpg" },
+    { id: "website-design", title: "Website Design", video: "https://pin.it/2Pd8VWPyQ", description: "Modern responsive websites with premium aesthetics.", features: ["Landing Pages", "Business Websites", "Responsive Layouts", "Conversion Optimization"], tools: ["Figma", "Webflow"], image: "https://i.pinimg.com/736x/e8/5e/4d/e85e4d1b96c68e3f38f1e59b77a2f104.jpg" },
+    { id: "mobile-app-design", title: "Mobile App Design", video: "https://pin.it/2FlKuZLsX", description: "Beautiful mobile experiences for iOS and Android.", features: ["iOS App Design", "Android App Design", "Interactive Prototypes", "Mobile UX Strategy"], tools: ["Figma", "Adobe XD"], image: "https://i.pinimg.com/1200x/4b/67/0c/4b670c98fe6fd403d33bba89c923e601.jpg" },
+    { id: "social-creatives", title: "Social Media Creatives", video: "https://pin.it/2GuRhJrWF", description: "Viral and engaging social media content design.", features: ["Instagram Posts", "Story Designs", "Ad Creatives", "Digital Campaign Assets"], tools: ["Photoshop", "Canva"], image: "https://i.pinimg.com/736x/ad/8a/82/ad8a8201445281b0867e2ef8b323d2a3.jpg" }
+  ];
+
+  // Helper to go back to homepage (preserve scroll position)
+  function goBackToHome() {
+    // Clear URL parameters
+    const url = new URL(window.location.href);
+    url.search = '';
+    window.history.pushState({}, '', url);
+    // Reload the homepage content
+    renderHomepageContent();
+    // Smooth scroll to top or to services if coming from service? but better to top
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // Render FULL homepage from scratch
+  function renderHomepageContent() {
+    const root = document.getElementById('app-root');
+    // Restore original HTML structure
+    root.innerHTML = `
+      <section class="hero" id="home"><div class="container hero-content"><div class="hero-text reveal"><h1 class="hero-name">Hi, I'm <span class="hero-highlight">Nishi</span></h1><p class="hero-sub">Graphic Designer & UI/UX Designer crafting beautiful digital experiences.</p><div><a href="#portfolio" class="btn-neon">View My Work</a><a href="#contact" class="btn-neon btn-outline">Hire Me</a></div><div class="job-highlight"><p><i class="fas fa-rocket" style="color:#00D9FF;"></i> <strong>Actively seeking opportunities!</strong> Available for freelance & full-time roles.</p></div></div><div class="hero-image reveal"><img src="https://i.ibb.co/Q7r0Tccf/my-profile.jpg" alt="Nishi"></div></div></section>
+      <section id="about"><div class="container"><div class="reveal"><h2>About Me</h2><div class="about-card glass-card" style="padding:2rem;"><p style="font-size:1.15rem;">I'm Nishi — a passionate Graphic Designer & UI/UX Designer with 1.5 years of experience creating stunning visual experiences.</p><div style="display:flex; flex-wrap:wrap; gap:0.8rem; margin-top:1.5rem;"><span class="skill-card"><i class="fas fa-paintbrush"></i> UI/UX</span><span class="skill-card"><i class="fas fa-trademark"></i> Branding</span><span class="skill-card"><i class="fas fa-draw-polygon"></i> Graphic Design</span></div></div></div></div></section>
+      <section id="skills"><div class="container"><div class="reveal"><h2>Core Expertise</h2><div class="skills-grid"><div class="skill-card"><i class="fab fa-figma"></i> Figma</div><div class="skill-card"><i class="fab fa-adobe"></i> Photoshop</div><div class="skill-card"><i class="fab fa-adobe"></i> Illustrator</div><div class="skill-card"><i class="fas fa-palette"></i> Canva</div></div></div></div></section>
+      <section id="mydesigns"><div class="container"><div class="reveal"><h2>🎨 My Designs</h2><div class="designs-grid">
+        <div class="design-card" onclick="openLightbox('https://i.ibb.co/C34nC5MK/flyer-graphic-design.png')"><img class="design-img" src="https://i.ibb.co/C34nC5MK/flyer-graphic-design.png" alt="Flyer"><div class="design-info"><h3>Flyer Graphic</h3></div></div>
+        <div class="design-card" onclick="openLightbox('https://i.ibb.co/7NTdqqk5/flyer.png')"><img class="design-img" src="https://i.ibb.co/7NTdqqk5/flyer.png" alt="Flyer"><div class="design-info"><h3>Modern Flyer</h3></div></div>
+        <div class="design-card" onclick="openLightbox('https://i.ibb.co/TM2gNZmf/digital-marketing.png')"><img class="design-img" src="https://i.ibb.co/TM2gNZmf/digital-marketing.png" alt="Digital Marketing"><div class="design-info"><h3>Digital Marketing</h3></div></div>
+        <div class="design-card" onclick="openLightbox('https://i.ibb.co/0pYBxQbP/business.png')"><img class="design-img" src="https://i.ibb.co/0pYBxQbP/business.png" alt="Business"><div class="design-info"><h3>Business Branding</h3></div></div>
+        <div class="design-card" onclick="openLightbox('https://i.ibb.co/v6Yj94cV/instagram-post.jpg')"><img class="design-img" src="https://i.ibb.co/v6Yj94cV/instagram-post.jpg" alt="Instagram"><div class="design-info"><h3>Instagram Post</h3></div></div>
+        <div class="design-card" onclick="openLightbox('https://i.ibb.co/tpqD6Xxv/Design-That-Speaks.jpg')"><img class="design-img" src="https://i.ibb.co/tpqD6Xxv/Design-That-Speaks.jpg" alt="Design That Speaks"><div class="design-info"><h3>Design That Speaks</h3></div></div>
+        <div class="design-card" onclick="openLightbox('https://i.ibb.co/X1wFBGT/flyer.jpg')"><img class="design-img" src="https://i.ibb.co/X1wFBGT/flyer.jpg" alt="Flyer"><div class="design-info"><h3>Creative Flyer</h3></div></div>
+      </div></div></div></section>
+      <section id="portfolio"><div class="container"><div class="reveal"><h2>Selected Work</h2><div class="bento-grid" id="portfolio-grid"></div></div></div></section>
+      <section id="services"><div class="container"><div class="reveal"><h2>What I Offer</h2><div class="service-grid" id="services-grid"></div></div></div></section>
+      <section id="contact"><div class="container"><div class="reveal"><h2>Let's Connect</h2><div class="contact-form glass-card"><form id="contactForm"><div class="form-group"><input type="text" placeholder="Your Name" required id="name"></div><div class="form-group"><input type="email" placeholder="Email Address" required id="email"></div><div class="form-group"><textarea rows="4" placeholder="Tell me about your project..." required id="message"></textarea></div><button type="submit" class="btn-neon" style="width:100%">Send Message <i class="fas fa-paper-plane"></i></button></form><div class="social-links"><a href="#"><i class="fab fa-behance"></i></a><a href="#"><i class="fab fa-dribbble"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="https://wa.me/9076972734"><i class="fab fa-whatsapp"></i></a></div><p style="text-align:center; margin-top:1rem;"><i class="fas fa-envelope"></i> nishim3003@gmail.com<br><i class="fab fa-whatsapp"></i> +91 90769 72734</p></div></div></div></section>
+      <footer><div class="container"><p>© 2026 Nishi — Graphic & UI/UX Designer.</p></div></footer>
+    `;
+    renderPortfolioGrid();
+    renderServicesGrid();
+    attachHomeEvents();
+    initRevealObserver();
+  }
+
+  function renderPortfolioGrid() {
+    const grid = document.getElementById('portfolio-grid');
+    if(grid) grid.innerHTML = projectsData.map(project => `<div class="portfolio-item" onclick="navigateToProject('${project.id}')"><img class="portfolio-img" src="${project.image}" alt="${project.title}" loading="lazy"><div class="portfolio-info"><h4>${project.title}</h4><p>${project.category}</p></div></div>`).join('');
+  }
+  function renderServicesGrid() {
+    const grid = document.getElementById('services-grid');
+    if(grid) grid.innerHTML = servicesData.map(service => `<div class="service-card" onclick="navigateToService('${service.id}')"><img class="service-img" src="${service.image}" alt="${service.title}" loading="lazy"><div class="service-content"><i class="fas fa-crown service-icon"></i><h3>${service.title}</h3><p>${service.description.substring(0,70)}</p></div></div>`).join('');
+  }
+
+  window.navigateToProject = (id) => { const url = new URL(window.location.href); url.searchParams.set('project', id); window.history.pushState({}, '', url); renderProjectPage(id); };
+  window.navigateToService = (id) => { const url = new URL(window.location.href); url.searchParams.set('service', id); window.history.pushState({}, '', url); renderServicePage(id); };
+
+  function renderProjectPage(projectId) {
+    const project = projectsData.find(p => p.id === projectId);
+    if(!project) return goBackToHome();
+    const root = document.getElementById('app-root');
+    root.innerHTML = `<div class="back-button-sticky" id="dynamicBackBtn"><i class="fas fa-arrow-left"></i> Back to Portfolio</div>
+      <div style="min-height:100vh; padding:120px 1.5rem 80px; background:#0B0B0F;"><div class="container" style="max-width:1280px; margin:0 auto;"><div class="glass-card" style="padding:2rem; margin-bottom:2rem;"><h1 style="color:#00D9FF;">${project.title}</h1><p><strong>Category:</strong> ${project.category}</p><p><strong>Overview:</strong> ${project.overview}</p><p><strong>Problem:</strong> ${project.problem}</p><p><strong>Process:</strong> ${project.process}</p><p><strong>Colors:</strong> ${project.colors}</p><p><strong>Typography:</strong> ${project.typography}</p><div class="skills-grid" style="margin-top:1rem;">${project.tools.map(t => `<span class="skill-card">${t}</span>`).join('')}</div><div style="margin-top:2rem;"><a href="${project.prototype}" class="btn-neon">Live Prototype</a></div></div><div class="related"><h2>Related Projects</h2><div class="bento-grid">${projectsData.filter(p => p.id !== project.id).slice(0,2).map(p => `<div class="portfolio-item" onclick="navigateToProject('${p.id}')"><img src="${p.image}" class="portfolio-img"><div class="portfolio-info"><h4>${p.title}</h4></div></div>`).join('')}</div></div></div></div>`;
+    const backBtn = document.getElementById('dynamicBackBtn');
+    if(backBtn) backBtn.addEventListener('click', () => goBackToHome());
+    window.scrollTo(0,0);
+  }
+
+  function renderServicePage(serviceId) {
+    const service = servicesData.find(s => s.id === serviceId);
+    if(!service) return goBackToHome();
+    const root = document.getElementById('app-root');
+    root.innerHTML = `<div class="back-button-sticky" id="serviceBackBtn"><i class="fas fa-arrow-left"></i> Back to Services</div>
+      <div style="position:relative; min-height:100vh; overflow:hidden;"><div style="position:absolute; top:0; left:0; width:100%; height:100%; background:radial-gradient(circle at top left, rgba(127,90,240,0.35), transparent 40%), #0B0B0F; z-index:-1; animation:pulseBg 8s infinite alternate;"></div>
+      <div style="padding:120px 1.5rem 80px;"><div class="container" style="max-width:1280px; margin:0 auto; text-align:center;"><h1 style="font-size:4rem; color:#00D9FF;">${service.title}</h1><p class="hero-sub" style="margin:1rem auto;">${service.description}</p>
+      <div class="glass-card" style="padding:2rem;"><h2>What You Get</h2><div class="bento-grid" style="margin-top:2rem;">${service.features.map(f => `<div class="glass-card" style="padding:1rem;"><i class="fas fa-check-circle" style="color:#00D9FF; font-size:2rem;"></i><h4>${f}</h4></div>`).join('')}</div>
+      <div class="skills-grid" style="justify-content:center; margin-top:2rem;">${service.tools.map(t => `<span class="skill-card">${t}</span>`).join('')}</div>
+      <div style="margin-top:2rem;"><button class="btn-neon" id="hireMeFromService">Hire Me <i class="fas fa-arrow-right"></i></button></div></div></div></div></div>`;
+    const backBtn = document.getElementById('serviceBackBtn');
+    if(backBtn) backBtn.addEventListener('click', () => goBackToHome());
+    const hireBtn = document.getElementById('hireMeFromService');
+    if(hireBtn) hireBtn.addEventListener('click', () => { goBackToHome(); setTimeout(() => { document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }, 150); });
+    window.scrollTo(0,0);
+  }
+
+  function attachHomeEvents() {
+    const form = document.getElementById('contactForm');
+    if(form) form.addEventListener('submit', (e) => { e.preventDefault(); document.getElementById('popupText').innerText = "Thank you! I'll get back soon."; document.getElementById('popup').style.display = "flex"; form.reset(); });
+    window.closePopup = () => document.getElementById('popup').style.display = "none";
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => { anchor.addEventListener('click', function(e) { e.preventDefault(); const target = document.querySelector(this.getAttribute('href')); if(target) target.scrollIntoView({ behavior: 'smooth' }); }); });
+  }
+  function initRevealObserver() { const reveals = document.querySelectorAll('.reveal'); const observer = new IntersectionObserver((entries) => { entries.forEach(e => e.isIntersecting && e.target.classList.add('active')); }, { threshold: 0.1 }); reveals.forEach(el => observer.observe(el)); }
+
+  // Lightbox & Cursor Effects
+  window.openLightbox = (src) => { const lb = document.getElementById('lightbox'); lb.style.display = "flex"; document.getElementById('lightboxImg').src = src; };
+  document.querySelector('.close-lightbox')?.addEventListener('click', () => document.getElementById('lightbox').style.display = "none");
+  document.getElementById('lightbox')?.addEventListener('click', (e) => { if(e.target === document.getElementById('lightbox')) document.getElementById('lightbox').style.display = "none"; });
+
+  const cursor = document.getElementById('customCursor'), dot = document.getElementById('cursorDot'), glow = document.getElementById('cursorGlow');
+  document.addEventListener('mousemove', (e) => { if(cursor) { cursor.style.transform = `translate(${e.clientX - 10}px, ${e.clientY - 10}px)`; dot.style.transform = `translate(${e.clientX - 3}px, ${e.clientY - 3}px)`; } if(glow) glow.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`; });
+
+  // Routing Initialization
+  function handleRouting() {
+    const params = new URLSearchParams(window.location.search);
+    const projectId = params.get('project');
+    const serviceId = params.get('service');
+    if(projectId) renderProjectPage(projectId);
+    else if(serviceId) renderServicePage(serviceId);
+    else { renderHomepageContent(); }
+  }
+  handleRouting();
+  window.addEventListener('popstate', () => handleRouting());
+</script>
+</body>
+</html>
